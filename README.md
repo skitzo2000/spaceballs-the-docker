@@ -1,6 +1,6 @@
 # Spaceballs the Docker
 
-A minimal Docker image that prints **Spaceballs** quotes in random terminal colors. Alpine-based, no extra packages.
+A minimal Docker meant for educational purposes that prints **Spaceballs** quotes in random terminal colors. Alpine-based, no extra packages.
 
 ## Quick start
 
@@ -26,7 +26,15 @@ docker run --rm -e LOOP=1 -e INTERVAL=5 spaceballs
 docker build -t spaceballs .
 ```
 
-Uses Alpine only — no figlet or other deps. Each quote is printed in a random color (red, green, yellow, blue, magenta, cyan, bold).
+**Or use the image from GitHub Container Registry:**
+
+```bash
+docker run --rm ghcr.io/skitzo2000/spaceballs-the-docker:latest
+```
+
+The workflow builds and pushes on every push to `main`.
+
+Uses Alpine only — no deps. Each quote is printed in a random color (red, green, yellow, blue, magenta, cyan, bold).
 
 ## Environment
 
